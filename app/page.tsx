@@ -1,5 +1,7 @@
 "use client";
 
+import ConsultationForm from "./components/ConsultationForm";
+
 export default function Home() {
   return (
     <main style={{ backgroundColor: "#000000", minHeight: "100vh", color: "#FFFFFF", fontFamily: "Arial, Helvetica, sans-serif" }}>
@@ -35,7 +37,7 @@ export default function Home() {
             Our Team
           </div>
           <h1 style={{ fontSize: "clamp(48px, 8vw, 72px)", fontWeight: 700, color: "#FFFFFF", lineHeight: 1.1, letterSpacing: "-1px", marginBottom: "24px" }}>
-            경영총괄본부
+            Management Division
           </h1>
           <p style={{ fontSize: "18px", color: "#B3B3B3", lineHeight: 1.8, maxWidth: "560px", margin: "0 auto" }}>
             인사, 총무, 회계를 통해 조직의 안정적인 운영을 지원합니다.<br />
@@ -103,24 +105,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section id="contact" style={{ padding: "100px 48px", backgroundColor: "#141414", textAlign: "center" }}>
-        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "36px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>궁금한 점이 있으신가요?</h2>
-          <p style={{ fontSize: "16px", color: "#B3B3B3", lineHeight: 1.8, marginBottom: "40px" }}>
-            업무 협조, 시스템 지원, 또는 프로젝트 제안이 있으시면 언제든지 연락주세요.
-          </p>
-          <a
-            href="mailto:contact@techmate-korea.com"
-            style={{ display: "inline-flex", alignItems: "center", gap: "10px", backgroundColor: "#E50914", color: "#FFFFFF", fontWeight: 700, fontSize: "16px", padding: "16px 40px", borderRadius: "8px", textDecoration: "none", minHeight: "56px", transition: "background-color 0.2s" }}
-            onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#C11119")}
-            onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#E50914")}
-          >
-            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            문의하기
-          </a>
+      {/* Contact / Consultation */}
+      <section id="contact" style={{ padding: "100px 48px", backgroundColor: "#141414" }}>
+        <div style={{ maxWidth: "720px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "56px" }}>
+            <h2 style={{ fontSize: "36px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>상담 신청</h2>
+            <p style={{ fontSize: "16px", color: "#B3B3B3", lineHeight: 1.8 }}>
+              업무 협조, 시스템 지원, 프로젝트 제안 등 궁금한 점을 남겨주세요.<br />
+              빠른 시일 내에 답변 드리겠습니다.
+            </p>
+          </div>
+          <ConsultationForm />
         </div>
       </section>
 
